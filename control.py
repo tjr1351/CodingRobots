@@ -54,7 +54,6 @@ def loop(r, i):
         sensors[k] = vconv
 
     timeout = conf.tick_timeout
-
     user_thread = Thread(target=get_response, args=(r, sensors))
     response = None
     user_thread.start()
@@ -83,6 +82,7 @@ def get_response(r, sensors):
 
 def communicate(r):
     while True:
+        sleep(0.015)
         line = sys.stdin.readline().strip()
         if line == 'FINISH':
             break
