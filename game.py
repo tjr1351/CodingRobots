@@ -60,7 +60,7 @@ class Game(object):
 		self.finish()
 
 	def load_robots(self):
-		if self.givenRobots == []:
+		if self.givenRobots != []:
 			robots = conf.robots
 		else:
 			robots = self.givenRobots
