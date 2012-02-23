@@ -110,9 +110,9 @@ class Robot(object):
 		self.i = i
 	def to_dict(self):
 		roboDict = {}
-		roboDict['position'] = self.body.position
+        roboDict['position'] = (self.body.position.x, self.body.position.y)
 		roboDict['rotation'] = self.gyro()
-		roboDict['turrent_angle'] = self.get_turretangle()
+        roboDict['turret_angle'] = self.get_turretangle()
 		return roboDict
 
 	def gyro(self):
