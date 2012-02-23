@@ -1,5 +1,5 @@
 # Robot subprocess
-subproc_python = '/usr/bin/python'
+subproc_python = '/usr/bin/python2.7'
 subproc_main = 'control.py'
 
 init_timeout = 1.0
